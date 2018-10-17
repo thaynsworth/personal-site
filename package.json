@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "0.1.0",
-  "homepage": "http://thaynsworth.github.io/personal-site.git",
+  "homepage": "http://thaynsworth.github.io/personal-site/",
   "private": true,
   "dependencies": {
     "react": "^16.5.2",

@@ -1,0 +1,31 @@
+
+
+.home-box {
+    position: fixed;
+    height: 50%;
+    width: 50%;
+}
+
+.about {
+    top: 0;
+    left: 0;
+    background-color: lightgreen;
+}
+
+.work {
+    top: 0;
+    right: 0;
+    background-color: lightblue;
+}
+
+.tech {
+    bottom: 0;
+    left: 0;
+    background-color: lightcoral;
+}
+
+.contact {
+    bottom: 0;
+    right: 0;
+    background-color: lightslategray;
+}

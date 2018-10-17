@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Home.css';
+
 class Home extends Component {
 
   componentDidMount() {
@@ -13,16 +15,16 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="about">
+        <div className="about home-box">
 
         </div>
-        <div className="work">
+        <div className="work home-box">
 
         </div>
-        <div className="tech">
+        <div className="tech home-box">
 
         </div>
-        <div className="contact">
+        <div className="contact home-box">
 
         </div>
       </div>
