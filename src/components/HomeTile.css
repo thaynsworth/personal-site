@@ -1,0 +1,28 @@
+.tile-title {
+    max-width: 50%;
+}
+
+.about {
+    grid-area: about;
+    background-color: lightgreen;
+}
+
+.projects {
+    grid-area: projects;
+    background-color: lightblue;
+}
+
+.tech {
+    grid-area: tech;
+    background-color: lightcoral;
+}
+
+.contact {
+    grid-area: contact;
+    background-color: lightslategray;
+}
+
+.resume {
+    grid-area: resume;
+    background-color: lightyellow;
+}

@@ -1,31 +1,21 @@
 
-
-.home-box {
-    position: fixed;
-    height: 50%;
-    width: 50%;
+.grid-container {
+    display: grid;
+    grid-template-areas:
+            'about about about projects projects projects'
+            'tech tech tech projects projects projects'
+            'resume resume contact contact contact contact';
+    grid-gap: 15px;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
 }
-
-.about {
-    top: 0;
-    left: 0;
-    background-color: lightgreen;
-}
-
-.work {
-    top: 0;
-    right: 0;
-    background-color: lightblue;
-}
-
-.tech {
-    bottom: 0;
-    left: 0;
-    background-color: lightcoral;
-}
-
-.contact {
-    bottom: 0;
-    right: 0;
-    background-color: lightslategray;
+.grid-container > div {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    box-shadow: 2px 1px 1px lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
