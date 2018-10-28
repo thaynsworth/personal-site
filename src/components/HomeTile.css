@@ -1,20 +1,49 @@
 .tile-title {
+    color: white;
+    opacity: .7;
+    font-weight: 700;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    transition: bottom 0.3s, left 0.3s, opacity 0.3s;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
 
+.is-hovered .tile-title {
+    bottom: 34px;
+    left: 44px;
+    opacity: .9;
+}
+
+.name {
+    grid-area: name;
+    background-color: #292F36;
+}
+
+.name .tile-title div:nth-child(2) {
+    font-size: .6em;
+    line-height: 1.2em;
+}
+
+.name.is-hovered .tile-title {
+    left: 40px;
+    bottom: 30px;
 }
 
 .about {
     grid-area: about;
-    background-color: lightgreen;
+    background-color: #058ED9;
 }
 
 .projects {
     grid-area: projects;
-    background-color: lightblue;
+    background-color: #FF6B6B;
 }
 
 .tech {
     grid-area: tech;
-    background-color: lightcoral;
+    background-color: #FFE66D;
 }
 
 .contact {
@@ -24,5 +53,5 @@
 
 .resume {
     grid-area: resume;
-    background-color: lightyellow;
+    background-color: #087F8C;
 }

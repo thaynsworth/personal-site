@@ -18,6 +18,7 @@ class Home extends Component {
     return (
       <div className="page-wrapper">
         <div className="grid-container">
+          <HomeTile className="name" name="TOM HAYNSWORTH" jobTitle="SOFTWARE DEVELOPER"/>
           <HomeTile className="about" name="ABOUT"/>
           <HomeTile className="projects" name="PROJECTS"/>
           <HomeTile className="tech" name="TECH"/>

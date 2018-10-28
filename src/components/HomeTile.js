@@ -4,6 +4,14 @@ import './HomeTile.css';
 
 class HomeTile extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      isHovered: false
+    };
+    this.handleHover = this.handleHover.bind(this);
+  }
+
   componentDidMount() {
 
   }
@@ -12,10 +20,20 @@ class HomeTile extends Component {
 
   }
 
+  handleHover(){
+    this.setState({ isHovered: !this.state.isHovered})
+  }
+
   render() {
+    const tileClasses = this.props.className + (this.state.isHovered ? " is-hovered" : "");
     return (
-      <div className={ this.props.className }>
-        <div className="tile-title">{ this.props.name }</div>
+      <div className={ tileClasses }
+           onMouseEnter={ this.handleHover }
+           onMouseLeave={ this.handleHover }>
+          <div className="tile-title">
+            <div>{ this.props.name }</div>
+            <div>{ this.props.jobTitle }</div>
+          </div>
       </div>
     );
   }
