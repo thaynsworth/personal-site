@@ -1,14 +1,22 @@
 
-.grid-container {
-    display: grid;
-    grid-template-areas:
-            'about about about projects projects projects'
-            'tech tech tech projects projects projects'
-            'resume resume contact contact contact contact';
-    grid-gap: 15px;
-    background-color: whitesmoke;
+.page-wrapper {
     height: 100vh;
     width: 100vw;
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+    max-height: 100%;
+    background-color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'about about about projects projects projects' 'tech tech tech projects projects projects' 'resume resume contact contact contact contact';
+    grid-gap: 40px;
+    height: 91%;
+    width: 93%;
+    margin: 0 auto;
+    padding: 3% 0;
 }
 .grid-container > div {
     text-align: center;
@@ -18,4 +26,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.grid-container > div:before {
+     content: '';
+     position: absolute;
+     border: white solid 12px;
+     top: 5px;
+     left: 5px;
+     right: 5px;
+     bottom: 5px;
+     opacity: .4;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: border;
+    transition-property: border;
+ }
+
+.grid-container > div:hover:before {
+    border: white solid 20px;
 }

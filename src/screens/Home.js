@@ -16,12 +16,14 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="grid-container">
-        <HomeTile className="about" name="ABOUT"/>
-        <HomeTile className="projects" name="PROJECTS"/>
-        <HomeTile className="tech" name="TECH"/>
-        <HomeTile className="contact" name="CONTACT"/>
-        <HomeTile className="resume" name="RESUME"/>
+      <div className="page-wrapper">
+        <div className="grid-container">
+          <HomeTile className="about" name="ABOUT"/>
+          <HomeTile className="projects" name="PROJECTS"/>
+          <HomeTile className="tech" name="TECH"/>
+          <HomeTile className="contact" name="CONTACT"/>
+          <HomeTile className="resume" name="RESUME"/>
+        </div>
       </div>
     );
   }
