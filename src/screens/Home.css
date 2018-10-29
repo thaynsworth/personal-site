@@ -1,20 +1,22 @@
 
 .page-wrapper {
     height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    max-width: 100%;
-    text-align: center;
+    min-height: 620px;
     max-height: 100%;
+    width: 100vw;
+    min-width: 405px;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
     background-color: #F7FFF7;
 }
 
 .grid-container {
     display: grid;
     grid-template-areas:
-            'name name name projects projects projects'
-            'about about about projects projects projects'
-            'tech tech contact contact resume resume';
+            'name name name work work work'
+            'about about about work work work'
+            'tech tech contact contact contact resume';
     grid-gap: 40px;
     height: 91%;
     width: 93%;
@@ -26,9 +28,6 @@
     font-size: 30px;
     position: relative;
     box-shadow: 2px 1px 1px lightgrey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }
 
@@ -41,8 +40,8 @@
      right: 5px;
      bottom: 5px;
      opacity: .4;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
     -webkit-transition-property: border;
     transition-property: border;
  }
@@ -71,4 +70,49 @@
 
 .grid-container > div:first-child:hover:before  {
     border: white solid 16px;
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-areas:
+                'name name name name name name'
+                'about about work work work work'
+                'tech tech tech contact contact resume';
+        grid-gap: 30px;
+        height: 93%;
+        width: 95%;
+        margin: 0 auto;
+        padding: 3% 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .grid-container {
+        grid-template-areas:
+                'name'
+                'name'
+                'about'
+                'work'
+                'tech'
+                'contact'
+                'resume';
+        grid-gap: 10px;
+        height: 96%;
+        width: 96%;
+        margin: 0 auto;
+        padding: 3% 0;
+    }
+
+    .grid-container > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .grid-container > div:before {
+        border: white solid 10px;
+    }
+
+    .grid-container > div:hover:before {
+        border: white solid 14px;
+    }
 }

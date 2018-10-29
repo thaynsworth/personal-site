@@ -20,7 +20,7 @@ class Home extends Component {
         <div className="grid-container">
           <HomeTile className="name" name="TOM HAYNSWORTH" jobTitle="SOFTWARE DEVELOPER"/>
           <HomeTile className="about" name="ABOUT"/>
-          <HomeTile className="projects" name="PROJECTS"/>
+          <HomeTile className="work" name="WORK"/>
           <HomeTile className="tech" name="TECH"/>
           <HomeTile className="contact" name="CONTACT"/>
           <HomeTile className="resume" name="RESUME"/>

@@ -5,15 +5,15 @@
     position: absolute;
     bottom: 30px;
     left: 40px;
-    transition: bottom 0.3s, left 0.3s, opacity 0.3s;
-    font-size: 1.2em;
-    line-height: 1.2em;
+    transition: bottom 0.2s, left 0.2s, opacity 0.2s;
+    font-size: 1em;
+    line-height: 1em;
 }
 
 .is-hovered .tile-title {
     bottom: 34px;
     left: 44px;
-    opacity: .9;
+    opacity: .8;
 }
 
 .name {
@@ -21,14 +21,28 @@
     background-color: #292F36;
 }
 
+.name .tile-title {
+    bottom: 36px;
+    left: 40px;
+    max-width: 260px;
+    opacity: .9;
+    font-size: 1.2em;
+    line-height: .9em;
+}
+
+.name .tile-title div:nth-child(1) {
+    margin-bottom: 5px;
+}
+
 .name .tile-title div:nth-child(2) {
-    font-size: .6em;
+    font-size: .5em;
     line-height: 1.2em;
+    margin-top: 5px;
 }
 
 .name.is-hovered .tile-title {
     left: 40px;
-    bottom: 30px;
+    bottom: 36px;
 }
 
 .about {
@@ -36,8 +50,8 @@
     background-color: #058ED9;
 }
 
-.projects {
-    grid-area: projects;
+.work {
+    grid-area: work;
     background-color: #FF6B6B;
 }
 
@@ -54,4 +68,79 @@
 .resume {
     grid-area: resume;
     background-color: #087F8C;
+}
+
+.resume .tile-title {
+    left: 30px;
+    font-size: .8em;
+}
+
+.resume.is-hovered .tile-title {
+    left: 34px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .resume .tile-title {
+        left: -8px;
+        bottom: 64px;
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+
+    .resume.is-hovered .tile-title {
+        left: -4px;
+        bottom: 68px;
+    }
+}
+
+@media (max-width: 800px) {
+    .tile-title {
+        font-size: .8em;
+        bottom: 25px;
+        left: 30px;
+    }
+
+    .is-hovered .tile-title {
+        bottom: 29px;
+        left: 34px;
+    }
+
+    .name .tile-title div:nth-child(1) {
+        margin-bottom: 5px;
+    }
+
+    .name .tile-title div:nth-child(2) {
+        margin-top: 5px;
+    }
+
+    .resume .tile-title {
+        left: -13px;
+        bottom: 60px;
+    }
+
+    .resume.is-hovered .tile-title {
+        left: -9px;
+        bottom: 64px;
+    }
+}
+
+@media (max-width: 650px) {
+    .tile-title {
+        position: static;
+        margin: 0 30px 0;
+    }
+
+    .name .tile-title {
+        max-width: 255px;
+        margin: 0 auto;
+    }
+
+    .resume .tile-title {
+        transform: none;
+    }
 }
