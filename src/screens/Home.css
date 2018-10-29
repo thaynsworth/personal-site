@@ -4,7 +4,7 @@
     min-height: 620px;
     max-height: 100%;
     width: 100vw;
-    min-width: 405px;
+    min-width: 316px;
     max-width: 100%;
     justify-content: center;
     text-align: center;
@@ -22,10 +22,11 @@
     width: 93%;
     margin: 0 auto;
     padding: 3% 0;
+    font-size: 30px;
 }
 .grid-container > div {
+    font-size: .8em;
     text-align: center;
-    font-size: 30px;
     position: relative;
     box-shadow: 2px 1px 1px lightgrey;
     cursor: pointer;
@@ -52,6 +53,7 @@
 }
 
 .grid-container > div:first-child {
+    font-size: 1em;
     text-align: left;
     cursor: default;
     opacity: .9;
