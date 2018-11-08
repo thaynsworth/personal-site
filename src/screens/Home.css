@@ -120,3 +120,9 @@
         border: white solid 12px;
     }
 }
+
+@media (max-width: 460px) {
+    .page-wrapper {
+        min-height: auto;
+    }
+}
