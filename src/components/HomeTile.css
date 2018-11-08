@@ -175,10 +175,11 @@
     }
 
     .resume .tile-title {
-        -webkit-transform: translatex(-50%) translateY(-50%) rotate(270deg);
-        -ms-transform: translatex(-50%) translateY(-50%) rotate(270deg);
-        transform: translatex(-50%) translateY(-50%) rotate(270deg);
-        height: auto;
+        -webkit-transform: translatex(-55%) translateY(-50%) rotate(270deg);
+        -ms-transform: translatex(-55%) translateY(-50%) rotate(270deg);
+        transform: translatex(-55%) translateY(-50%) rotate(270deg);
+        height: 70px;
+        width: 85px;
         font-size: 1.4em;
     }
 }
