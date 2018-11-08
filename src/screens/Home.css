@@ -14,8 +14,8 @@
 .grid-container {
     display: grid;
     grid-template-areas:
+            'name name name about about about'
             'name name name work work work'
-            'about about about work work work'
             'tech tech contact contact contact resume';
     grid-gap: 40px;
     height: 91%;
@@ -74,11 +74,20 @@
     border: white solid 16px;
 }
 
-@media (max-width: 800px) {
+.grid-container > div:last-child {
+    box-shadow: none;
+}
+
+.grid-container > div:last-child:before {
+    opacity: .9;
+    border: none !important;
+}
+
+@media (max-width: 1000px) {
     .grid-container {
         grid-template-areas:
                 'name name name name name name'
-                'about about work work work work'
+                'work work about about about about'
                 'tech tech tech contact contact resume';
         grid-gap: 30px;
         height: 93%;
@@ -91,13 +100,11 @@
 @media (max-width: 650px) {
     .grid-container {
         grid-template-areas:
-                'name'
-                'name'
-                'about'
-                'work'
-                'tech'
-                'contact'
-                'resume';
+                'name name name'
+                'name name name'
+                'about work work'
+                'about tech tech'
+                'contact contact resume';
         grid-gap: 10px;
         height: 96%;
         width: 96%;
@@ -105,16 +112,11 @@
         padding: 3% 0;
     }
 
-    .grid-container > div {
-        display: flex;
-        align-items: center;
-    }
-
     .grid-container > div:before {
         border: white solid 10px;
     }
 
     .grid-container > div:hover:before {
-        border: white solid 14px;
+        border: white solid 12px;
     }
 }

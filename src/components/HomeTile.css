@@ -40,11 +40,6 @@
     margin-top: 5px;
 }
 
-.name.is-hovered .tile-title {
-    left: 40px;
-    bottom: 36px;
-}
-
 .about {
     grid-area: about;
     background-color: #058ED9;
@@ -57,48 +52,37 @@
 
 .tech {
     grid-area: tech;
-    background-color: #FFE66D;
+    background-color: #99a6b2;
 }
 
 .contact {
     grid-area: contact;
-    background-color: lightslategray;
+    background-color: #FFE66D;
 }
 
 .resume {
     grid-area: resume;
-    background-color: #087F8C;
+    opacity: .9;
 }
 
 .resume .tile-title {
-    left: 30px;
-    font-size: .8em;
+    opacity: .9;
+    color: #292F36;
+    font-weight: 900;
+    font-size: 2.1em;
+    -webkit-transform: translatex(-50%) translateY(-50%);
+    -ms-transform: translatex(-50%) translateY(-50%);
+    transform: translatex(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    bottom: 0;
 }
-
-.resume.is-hovered .tile-title {
-    left: 34px;
-}
-
-
 
 @media (max-width: 1200px) {
-    .resume .tile-title {
-        left: 0;
-        bottom: 60px;
-        -webkit-transform: rotate(270deg);
-        -moz-transform: rotate(270deg);
-        -o-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-        transform: rotate(270deg);
-    }
 
-    .resume.is-hovered .tile-title {
-        left: 4px;
-        bottom: 64px;
-    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .tile-title {
         font-size: .8em;
         bottom: 25px;
@@ -119,25 +103,35 @@
     }
 
     .resume .tile-title {
-        left: 0px;
-        bottom: 55px;
+        -webkit-transform: translatex(-50%) translateY(-50%) rotate(270deg);
+        -ms-transform: translatex(-50%) translateY(-50%) rotate(270deg);
+        transform: translatex(-50%) translateY(-50%) rotate(270deg);
+        font-size: 1.5em;
+        width: 165px;
+        height: 37px;
     }
 
-    .resume.is-hovered .tile-title {
-        left: 4px;
-        bottom: 59px;
+    .resume .tile-title > div {
+        display: inline-block;
     }
 }
 
 @media (max-width: 650px) {
     .tile-title {
-        position: static;
-        margin: 0 30px 0;
+        position: absolute;
+        bottom: 28px;
+        left: 28px;
     }
 
     .name .tile-title {
         max-width: 210px;
         margin: 0 auto;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
     }
 
     .name .tile-title div:nth-child(1) {
@@ -149,6 +143,42 @@
     }
 
     .resume .tile-title {
-        transform: none;
+        -webkit-transform: translatex(-50%) translateY(-50%) rotate(360deg);
+        -ms-transform: translatex(-50%) translateY(-50%) rotate(360deg);
+        transform: translatex(-50%) translateY(-50%) rotate(360deg);
+        font-size: 1.5em;
+        height: auto;
+    }
+
+    .resume .tile-title > div {
+        display: block;
+    }
+}
+
+@media (max-width: 460px) {
+    .about .tile-title {
+        -webkit-transform: rotate(270deg) translateY(-50%);
+        -ms-transform: rotate(270deg) translateY(-50%);
+        transform: rotate(270deg) translateY(-50%);
+        bottom: 50px;
+        left: 0px;
+    }
+
+    .about .tile-title {
+        left: 15px;
+        bottom: 52px;
+    }
+
+    .is-hovered.about .tile-title {
+        left: 19px;
+        bottom: 53px;
+    }
+
+    .resume .tile-title {
+        -webkit-transform: translatex(-50%) translateY(-50%) rotate(270deg);
+        -ms-transform: translatex(-50%) translateY(-50%) rotate(270deg);
+        transform: translatex(-50%) translateY(-50%) rotate(270deg);
+        height: auto;
+        font-size: 1.4em;
     }
 }

@@ -10,6 +10,7 @@ class HomeTile extends Component {
       isHovered: false
     };
     this.handleHover = this.handleHover.bind(this);
+    this.openTile = this.openTile.bind(this);
   }
 
   componentDidMount() {
@@ -21,7 +22,16 @@ class HomeTile extends Component {
   }
 
   handleHover(){
-    this.setState({ isHovered: !this.state.isHovered})
+    if (this.props.className === 'about' ||
+        this.props.className === 'work' ||
+        this.props.className === 'tech' ||
+        this.props.className === 'contact') {
+      this.setState({ isHovered: !this.state.isHovered})
+    }
+  }
+
+  openTile(name) {
+    this.props.openTile(name);
   }
 
   render() {
@@ -29,10 +39,11 @@ class HomeTile extends Component {
     return (
       <div className={ tileClasses }
            onMouseEnter={ this.handleHover }
-           onMouseLeave={ this.handleHover }>
+           onMouseLeave={ this.handleHover }
+           onClick={ this.openTile(this.props.title) }>
           <div className="tile-title">
-            <div>{ this.props.name }</div>
-            <div>{ this.props.jobTitle }</div>
+            <div>{ this.props.title }</div>
+            { this.props.subTitle ? <div>{ this.props.subTitle }</div> : '' }
           </div>
       </div>
     );
